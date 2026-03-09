@@ -4,17 +4,17 @@ export const profileInfo = {
     name: "Ian Benson Mokaya",
     title: "Broadcast Operator",
     heroHeadingPrimary: "PRECISION",
-    heroHeadingSecondary: "IN CHAOS",
-    location: "Nairobi, Kenya",
+    heroHeadingSecondary: "IN CHAO S",
+    location: "Berlin, Germany",
     tagline: "Capturing the adrenaline of live sports and the soul of cinematic narrative.",
     heroSubtext: "From the sets of Maisha Magic to the sidelines of the Safari 7s. Professional visual solutions for TV, Sports, and Digital."
 };
 
 export const experience = [
     {
-        year: "Jan 2024 – Present",
+        year: "November 2025 – December 2025",
         role: "Camera Operator",
-        company: "Live Eye Production",
+        company: "Cube Production",
         projects: "SportPesa National 7s, Safari 7s, KPL",
         description: "Specialization: High-speed sports tracking & ENG. Covering major league tournaments including the Safari Sevens and Kenya Premier League. Delivering broadcast-standard feeds for international distribution.",
     },
@@ -118,9 +118,17 @@ export const caseStudies = [
 ];
 
 export const socials = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/ian-benson-0a66841a0/", icon: "Linkedin" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/ian-benson-mokaya/", icon: "Linkedin" },
     { name: "Instagram", url: "https://www.instagram.com/ian.bensoo_?igsh=dTBidXJvcW51emRt&utm_source=qr", icon: "Instagram" },
     { name: "Facebook", url: "https://www.facebook.com/share/1MsFpp8FdP/?mibextid=wwXIfr", icon: "Facebook" }
+];
+
+export const education = [
+    {
+        year: "January 2026 – Present",
+        school: "SRH International College Berlin",
+        degree: "Film Production (bachelors)"
+    }
 ];
 
 export const cvLink = "/projects/Ian_Benson_Mokaya_CV.pdf";

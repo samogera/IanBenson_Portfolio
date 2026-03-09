@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Award, Camera, Clapperboard, Film, User, Briefcase, MapPin, Monitor, Heart, Coffee } from 'lucide-react';
-import { profileInfo, experience, skills } from '../data_new';
+import { profileInfo, experience, skills, education } from '../data_new';
 
 const About = () => {
     return (
@@ -40,7 +40,7 @@ const About = () => {
                             className="md:col-span-7 prose prose-lg prose-invert text-gray-400"
                         >
                             <p className="mb-6">
-                                I'm <strong className="text-white">Ian Benson Mokaya</strong>, a specialized videographer based in <strong className="text-white">Nairobi, Kenya</strong>.
+                                I'm <strong className="text-white">Ian Benson Mokaya</strong>, a specialized videographer based in <strong className="text-white">Berlin, Germany</strong>.
                                 My journey didn't start in a classroom; it started with a curiosity for how the world looks through a lens.
                             </p>
                             <p className="mb-6">
@@ -53,7 +53,7 @@ const About = () => {
                                 </div>
                                 <div className="flex items-center gap-3 text-gray-300">
                                     <MapPin className="w-5 h-5 text-accent" />
-                                    <span>Nairobi, Global Mindset</span>
+                                    <span>Berlin, Global Mindset</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -101,7 +101,7 @@ const About = () => {
                             { label: "Years Experience", value: "5+" },
                             { label: "Broadcast Events", value: "20+" },
                             { label: "Narrative Projects", value: "10+" },
-                            { label: "Location", value: "Nairobi" }
+                            { label: "Location", value: "Berlin" }
                         ].map((stat, i) => (
                             <motion.div
                                 key={stat.label}
@@ -138,7 +138,7 @@ const About = () => {
 
                         {experience.map((job, index) => (
                             <motion.div
-                                key={index}
+                                key={`exp-${index}`}
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -165,6 +165,44 @@ const About = () => {
                                         {job.description}
                                     </p>
                                     <div className="text-sm font-bold text-accent font-header uppercase tracking-wider">{job.projects}</div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl font-header font-bold text-white mb-20 md:mb-32 mt-32 text-center uppercase tracking-widest"
+                    >
+                        Education
+                    </motion.h2>
+
+                    <div className="space-y-24 relative">
+                        {/* Center Line */}
+                        <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-accent/50 to-transparent" />
+
+                        {education.map((edu, index) => (
+                            <motion.div
+                                key={`edu-${index}`}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className={`relative flex flex-col md:flex-row gap-8 align-top ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                            >
+                                {/* Timeline Dot */}
+                                <div className="absolute left-[20px] md:left-1/2 top-0 w-3 h-3 -translate-x-1/2 rounded-full bg-black border-2 border-accent z-20 shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
+
+                                <div className={`flex-1 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:text-right md:pr-16' : 'md:text-left md:pl-16'}`}>
+                                    <span className="inline-block px-3 py-1 bg-white/5 rounded-full text-xs font-mono text-accent mb-4 border border-white/5">{edu.year}</span>
+                                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{edu.degree}</h3>
+                                    <h4 className="text-lg text-gray-400 mb-6">{edu.school}</h4>
+                                </div>
+
+                                <div className={`flex-1 hidden md:block pl-16 ${index % 2 === 0 ? 'text-left' : 'text-right pr-16 pl-0'}`}>
+                                    <div className="text-sm font-bold text-accent font-header uppercase tracking-wider">Studies</div>
                                 </div>
                             </motion.div>
                         ))}

@@ -29,9 +29,9 @@ const Contact = () => {
                         <Mail className="group-hover:scale-110 transition-transform" />
                         <span>ianbensonm2@gmail.com</span>
                     </a>
-                    <a href="tel:+254795386144" className="group flex items-center space-x-3 text-2xl text-gray-300 hover:text-accent transition-colors">
+                    <a href="tel:+491772339908" className="group flex items-center space-x-3 text-2xl text-gray-300 hover:text-accent transition-colors">
                         <Phone className="group-hover:scale-110 transition-transform" />
-                        <span>+254 795 386 144</span>
+                        <span>+49 177 233 9908</span>
                     </a>
                 </motion.div>
 
